@@ -32,6 +32,34 @@ Run `ng serve` to run frontend development server and `npm run serve` to run bac
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
+## Deployment on Netlify
+
+This project is configured for deployment on Netlify.
+
+### Prerequisites
+- Node.js 16.x (specified in `.nvmrc`)
+- Netlify account
+
+### Deployment Steps
+1. Connect your GitHub repository to Netlify
+2. Netlify will automatically detect the `netlify.toml` configuration
+3. Set environment variables in Netlify dashboard if needed (e.g., API URLs)
+4. Deploy the site
+
+### Configuration Files
+- `.nvmrc`: Specifies Node.js version 16
+- `netlify.toml`: Build configuration for Netlify
+- Build command: `npm run build`
+- Publish directory: `dist/evenza-mdb-frontend`
+
+### Backend Deployment
+The backend (Express.js) needs to be deployed separately on a platform that supports Node.js applications (e.g., Heroku, Vercel, AWS). Update the API URLs in the environment files accordingly.
+
+### Environment Variables
+Configure the following in Netlify dashboard:
+- `NODE_VERSION`: 16
+- Any API endpoints or secrets required by the application
+
 ## Running unit tests
 
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
